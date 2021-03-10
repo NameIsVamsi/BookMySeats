@@ -1,0 +1,94 @@
+.container{
+    height: 670px;
+    width: 100%;
+    background-color: black;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  body{
+	margin: 0px;
+}
+
+.navbar{
+	height: 100px;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.navbar img{
+	height: 60px;
+	width: 60px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 30px;
+}
+
+.navbar h1{
+	margin-left: 20px;
+	margin-top: 40px;
+	float: left;
+	font-size: 30px;
+	font-family: -apple-system;
+}
+
+.navbar input[type=text]{
+	margin-left: 30px;
+	margin-top: 40px;
+	float: left;
+	padding: 6px;
+	width: 550px;
+	font-size: 17px;
+}
+
+.navbar p{
+	margin-right: 50px;
+	margin-top: 45px;
+	font-family: -apple-system;
+	float: right;
+	font-size: 20px;
+}
+
+.navbar button{
+	padding: 5px 22px;
+	margin-top: 38px; 
+	font-size: 20px;
+	color: white;
+	border-radius: 10px;
+	background-color: #FF1919;
+	margin-right: 60px;
+	float: right;
+}
+
+.dark-mode-button{
+	position: fixed;
+}
+
+.dark-mode-button img{
+	height: 20px;
+	width: 20px;
+}
+
+.dark-mode{
+	background-color:black;
+	color: white;
+}
