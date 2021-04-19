@@ -16,10 +16,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta name="google-signin-client_id" content="386918221572-ntvfo1s66g49ghamntgsc75ilp5aifi0.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="google.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <style>
         .container1 {
               height: auto;
@@ -36,48 +32,19 @@
 <body>
 
 
-     <nav>
+    <nav>
         <div class="navbar" id="app">
-            <a href="index.php"><img v-bind:src="Image" height="60" width="60"></a>
+            <img v-bind:src="Image" height="60" width="60">
             <h1>{{ Title }}</h1>
-     <div class="search-box">
-        <input type="text" autocomplete="off" placeholder="Search Movies..." />
-        <div class="result"></div>
-    </div>
-        <button type="button" id="google" data-toggle="modal" data-target="#mymodal" class="google-profile"  >Signin</button>
-            <button type="button" data-toggle="modal" data-target="#mymodal" class="google-signin" value="SignIn">Sign in</button>
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search movies.." name="search">
+            </form>
+            <button>Sign in</button>
             <select name="select" readonly>
-              <option id="selected" value="Location">{{ Location }} </option>
-        <option>Montreal</option>
-        <option>Toronto</option>
-        <option>Vancouver</option>
-        <option>Ottawa</option>
+                <option id="selected" value="Location">{{ Location }} </option>
             </select>
         </div>
     </nav>
-
-<div class="modal fade" id="mymodal" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Sign in</h4>
-      </div>
-
-      <div class="modal-body">
-        <div class="g-signin2" data-onsuccess="onsignin"></div>
-      </div>
-      <a href="#" onclick="signOut();">Sign out</a>
-<!--       <a onclick="logout()">Logout</a>
- -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 
     <!-- Dark mode -->
     <button onclick="darkMode()" class="dark-mode-button"><img src="dark-mode.png"></button>
@@ -161,31 +128,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="main.js"></script>
     <hr>
-    <script>
-function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-
-
-    // Animatation
-        const root = document.documentElement;
-        const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-        const marqueeContent = document.querySelector("ul.marquee-content");
-
-        root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
-        for(let i=0; i<marqueeElementsDisplayed; i++) {
-            marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-        }
-
-        function darkMode(){
-            var ele = document.body;
-            ele.classList.toggle("dark-mode");
-        }
-    </script>
 </body>
 
 <!-- Footer -->
@@ -196,7 +138,7 @@ function signOut() {
             <ul>
                 <li class="first-element"><b>Movies By Genre</b></li>
                 <li><a href="GenreAction/GenreAction.html">Action</a></li>
-                <li><a href="GenreRomance/GenreRomance.html">Romance</a></li>
+                <li><a href="#">Romance</a></li>
                 <li><a href="#">Comedy</a></li>
                 <li><a href="#">Drama</a></li>
                 <li><a href="#">Sci-fi</a></li>
