@@ -1,2 +1,2 @@
 # BookMySeats
-This is movie booking site where user can login through google and select the movie seats.
+This is movie booking site where user can book their tickets from any theatres.
