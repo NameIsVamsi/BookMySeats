@@ -1,0 +1,38 @@
+function initMap(){
+    var locations = [
+      ["2313 Sainte-Catherine</br><a href='https://goo.gl/maps/iQ6uYHTTuf7m7R1u5'>get direction</a>", 45.4897905,-73.5871302, 4],
+      ["350 rue Emery</br><a href='https://goo.gl/maps/JVZiwQ6CLWvNP7KM7'>get direction</a>", 45.514647774992625,
+      -73.56350753091381, 5],
+      ["4825 avenue pierre de coubertine</br><a href='https://goo.gl/maps/PSDJmZdspN12zZ3y5'>get direction</a>", 45.56130960249313,-73.5486179290662 , 3],
+      ["6700 Chemin de la cote-des-neiges</br> <a href='https://goo.gl/maps/h6ZMx3WN5DVt9xGHA'>get direction</a>",45.483205833996394, -73.69412976159634, 2],
+      ["3500 boulevard de la Cote-vertu</br><a href='https://goo.gl/maps/44KqvkrAtNjuS9Xq8'>get direction</a>",45.493999011103114, -73.70514834625538, 1],
+      ["8075 Rue Hochelaga</br><a href='https://goo.gl/maps/aXngdmQL39eWsJHy7'>get direction</a>",45.59521195976195, -73.52405412906518, 6],
+      ["7305 boulevard langelier</br><a href='https://goo.gl/maps/3KDu9bchdZ7y3YyV9'>get direction</a>", 45.59176067130406, -73.56962298673562, 7],
+      ['7816 Champlain', 45.427546012269524, -73.60827220208124,8],
+      ["5940, des grandes prairies</br><a href='https://goo.gl/maps/vtwniRSebmUyMqxi7'>get direction</a>",45.60056182882494, -73.60938675974666,9]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 11,
+      center: new google.maps.LatLng( 45.50, -73.56),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+}

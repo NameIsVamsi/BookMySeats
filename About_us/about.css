@@ -66,7 +66,7 @@ html {
     background-color: #555;
 }
 
-ul .ul{
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -74,11 +74,11 @@ ul .ul{
     background-color: #333;
 }
 
-.ul li{
+li {
     float: left;
 }
 
-.ul li a {
+li a {
     display: block;
     color: white;
     text-align: center;
@@ -86,11 +86,11 @@ ul .ul{
     text-decoration: none;
 }
 
-.ul li a:hover:not(.active) {
+li a:hover:not(.active) {
     background-color: #111;
 }
 
-.ul ul.button {
+ul.button {
     left: 0px;
     float: left;
 }
@@ -100,7 +100,7 @@ background-color: rgb(255, 0, 0);
 } */
 
 /* Style the footer */
-/*footer {
+footer {
     background-color: #777;
     padding: 10px;
     text-align: center;
@@ -108,7 +108,7 @@ background-color: rgb(255, 0, 0);
     width: 100%;
     position: fixed;
     bottom: 0px;
-}*/
+}
 
 @media screen and (max-width: 650px) {
     .column {
